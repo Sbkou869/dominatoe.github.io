@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мобильная версия сайта</title>
+    <style>
+      /* Общие стили для всего сайта */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Стили для мобильных устройств */
+      @media screen and (max-width: 600px) {
+        /* Пример стилей для заголовка */
+        h1 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        /* Пример стилей для параграфа */
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+
+        /* Пример стилей для изображения */
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        /* Пример стилей для навигационного меню */.navbar {
+          background-color: #333;
+          padding: 10px;
+          color: #fff;
+        }.navbar ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+        }.navbar li {
+          margin-right: 10px;
+        }.navbar a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        /* Пример стилей для кнопки раскрывающегося списка */.dropdown-btn {
+          background-color: #333;
+          color: #fff;
+          padding: 8px 12px;
+          border: none;
+          cursor: pointer;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }.dropdown-content {
+          display: none;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+        }.dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }.dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }.show {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="[https://discord.gg/vcvK3UMBgq]">Контакты</a></li>
+        <li>
+          <button class="dropdown-btn" onclick="toggleDropdown()">Меню</button>
+          <div class="dropdown-content" id="dropdownContent">
+            <a href="#">Пункт 1</a>
+            <a href="#">Пункт 2</a>
+            <a href="#">Пункт 3</a>
+            <li><a href="#">Администрация сайта</a></li>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <h1>Добро пожаловать на мобильную версию сайта!</h1>
+    <p>Это всего лишь пример, но вы можете добавить здесь свой контент.</p>
+    <img src="your-image.jpg" alt="Изображение" />
+
+    <script>
+      function toggleDropdown() {
+        var dropdownContent = document.getElementById("dropdownContent");
+        dropdownContent.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
